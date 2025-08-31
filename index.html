@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Cùng Five</title>
+</head>
+<body>
+  <h1>Danh sách nh?c Cùng Five</h1>
+  <div id="playlist"></div>
+
+  <script>
+    // Ch? s?a m?ng này khi thêm file m?i
+    const files = ["bai1.mp3", "bai2.mp3", "bai3.mp3"]; 
+    const container = document.getElementById("playlist");
+
+    files.forEach(file => {
+      const div = document.createElement("div");
+      div.innerHTML = `<p>${file}</p>
+        <audio controls>
+          <source src="${file}" type="audio/mpeg">
+        </audio>`;
+      container.appendChild(div);
+    });
+  </script>
+</body>
+</html>
